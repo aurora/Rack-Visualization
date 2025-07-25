@@ -15,14 +15,28 @@ public class SvgGenerator
 
     public string GenerateSvg(RackSet rackSet)
     {
-        var maxRackHeight = rackSet.Racks.Count > 0 
-            ? rackSet.Racks.Max(r => r.Height) 
+        var maxRackHeight = rackSet.Racks.Count > 0
+            ? rackSet.Racks.Max(r => r.Height)
             : DefaultRackHeightUnits;
 
         var rackCount = rackSet.Racks.Count;
         var svgHeight = (2 * DefaultSvgMargin) + (DefaultRackUnitPoints * maxRackHeight);
-        var svgWidth = (2 * DefaultSvgMargin) + (rackCount * DefaultRackWidthPoints) + 
-                       ((rackCount - 1) * DefaultRackSpacingPoints);
+
+        // Berechne maximale Label-Länge (in Zeichen)
+        int maxLabelLen = 0;
+        foreach (var rack in rackSet.Racks)
+        {
+            foreach (var device in rack.Devices)
+            {
+                if (!string.IsNullOrEmpty(device.Text) && device.Text.Length > maxLabelLen)
+                    maxLabelLen = device.Text.Length;
+            }
+        }
+        // Schätze Breite: 8px pro Zeichen + 32px Puffer
+        int labelWidth = (maxLabelLen * 8) + 32;
+
+        var svgWidth = (2 * DefaultSvgMargin) + (rackCount * DefaultRackWidthPoints) +
+                       ((rackCount - 1) * DefaultRackSpacingPoints) + labelWidth;
 
         var svg = new StringBuilder();
         svg.AppendLine($@"<svg baseProfile=""full"" height=""{svgHeight}"" version=""1.1"" width=""{svgWidth}"" xmlns=""http://www.w3.org/2000/svg"" xmlns:xlink=""http://www.w3.org/1999/xlink"">");
@@ -105,12 +119,29 @@ public class SvgGenerator
         // Device background rectangle
         deviceSvg.AppendLine($@"<rect x=""0"" y=""0"" width=""{DefaultRackWidthPoints}"" height=""{deviceHeight}"" fill=""{color}"" stroke=""black""/>");
 
-        // Device text - better vertical centering
+        // Im Shape steht jetzt der Typ des Geräts (zentriert)
+        {
+            var textY = (deviceHeight / 2.0) + 4;
+            deviceSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{textY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""central"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Type)}</text>");
+        }
+
+        // Label außerhalb des Racks rechts, vertikal zentriert zur Einheit
         if (!string.IsNullOrEmpty(device.Text))
         {
-            // Calculate better vertical center position - add small offset for better visual centering
-            var textY = (deviceHeight / 2.0) + 4;
-            deviceSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{textY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""central"" font-family=""sans-serif"">{XmlEscape(device.Text)}</text>");
+            var labelX = DefaultRackWidthPoints + 16; // 16px Abstand rechts vom Rack
+            var labelY = (deviceHeight / 2.0) + 4;
+            var labelText = $@"<text x=""{labelX.ToString(CultureInfo.InvariantCulture)}"" y=""{labelY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""start"" dominant-baseline=""central"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Text)}</text>";
+
+            // Wenn href vorhanden, Label als Link
+            if (!string.IsNullOrEmpty(device.Href))
+            {
+                var href = !string.IsNullOrEmpty(baseHref) && Uri.IsWellFormedUriString(baseHref, UriKind.Absolute)
+                    ? new Uri(new Uri(baseHref), device.Href).ToString()
+                    : device.Href;
+                labelText = $@"<a xlink:href=""{XmlEscape(href)}"">{labelText}</a>";
+            }
+            // Label außerhalb des Racks hinzufügen
+            deviceSvg.AppendLine(labelText);
         }
 
         // Device symbols based on type
