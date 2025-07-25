@@ -1,7 +1,8 @@
 using System.Globalization;
+using System.Security;
 using System.Text;
-using System.Xml;
 using RackVisualization.Models;
+using RackVisualization.Services;
 
 namespace RackVisualization.Services;
 
@@ -54,6 +55,12 @@ public class SvgGenerator
         var xOffset = DefaultSvgMargin;
         foreach (var rack in rackSet.Racks)
         {
+            // Skala links vom Rack (mit mehr Abstand)
+            svg.AppendLine($@"<g transform=""translate({xOffset - 50}, 0)"">");
+            svg.AppendLine(GenerateRackScale(rack.Height));
+            svg.AppendLine("</g>");
+
+            // Rack selbst
             svg.AppendLine($@"<g transform=""translate({xOffset}, 0)"">");
             svg.AppendLine(GenerateRack(rack, rackSet.BaseHref));
             svg.AppendLine("</g>");
@@ -222,12 +229,34 @@ public class SvgGenerator
         return deviceContent;
     }
 
-    private static string XmlEscape(string text)
+    // Skala für Höheneinheiten (U) links neben dem Rack
+    private string GenerateRackScale(int rackHeight)
     {
-        return text.Replace("&", "&amp;")
-                  .Replace("<", "&lt;")
-                  .Replace(">", "&gt;")
-                  .Replace("\"", "&quot;")
-                  .Replace("'", "&apos;");
+        var sb = new StringBuilder();
+        int scaleX = 44; // Abstand von links (Skala steht bei x=0 bis x=32)
+        int textX = scaleX; // Text rechtsbündig, etwas Abstand zum Strich
+        int lineX1 = scaleX - 14; // Strich beginnt links
+        int lineX2 = scaleX + 2;      // Strich endet rechts (am Rack)
+
+        for (int u = rackHeight; u >= 1; u--)
+        {
+            // Y-Position: Oberkante der jeweiligen Höheneinheit
+            double y = DefaultSvgMargin + (rackHeight - u) * DefaultRackUnitPoints;
+
+            // Text (rechtsbündig, vertikal zentriert in der Unit)
+            sb.AppendLine($@"<text x=""{textX}"" y=""{(y + DefaultRackUnitPoints / 2.0 + 1).ToString(CultureInfo.InvariantCulture)}"" text-anchor=""end"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""12"">{u}</text>");
+            // Skalenstrich
+            sb.AppendLine($@"<line x1=""{lineX1}"" y1=""{y.ToString(CultureInfo.InvariantCulture)}"" x2=""{lineX2}"" y2=""{y.ToString(CultureInfo.InvariantCulture)}"" stroke=""black"" stroke-width=""2""/>");
+        }
+        // Unterkante (letzter Strich)
+        double yBottom = DefaultSvgMargin + rackHeight * DefaultRackUnitPoints;
+        sb.AppendLine($@"<line x1=""{lineX1}"" y1=""{yBottom.ToString(CultureInfo.InvariantCulture)}"" x2=""{lineX2}"" y2=""{yBottom.ToString(CultureInfo.InvariantCulture)}"" stroke=""black"" stroke-width=""2""/>");
+
+        return sb.ToString();
+    }
+
+    private static string XmlEscape(string input)
+    {
+        return SecurityElement.Escape(input);
     }
 }
