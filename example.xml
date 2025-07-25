@@ -1,0 +1,26 @@
+<racks base="Rack Group Name">
+  <rack height="42" name="Example">
+    <patch>Patch</patch>
+    <cables>Cables</cables>
+    <switch>Switch</switch>
+    <cables>Cables</cables>
+    <patch>Patch</patch>
+    <cables>Cables</cables>
+    <switch>Switch</switch>
+    <cables>Cables</cables>
+    <firewall href="firewall-01">Firewall</firewall>
+    <cables>Cables</cables>
+    <firewall href="firewall-02">Firewall</firewall>
+    <cables at="31">Cables</cables>
+    <monitor height="8">Monitor</monitor>
+    <keyboard>Keyboard</keyboard>
+    <kvm>KVM</kvm>
+    <blank height="2"/>
+    <server height="2" href="server-01">Server</server>
+    <san height="2" href="san-01">Storage Area Network</san>
+    <server href="server-02" height="4">Server</server>
+    <gap height="2"/>
+    <pdu>Power Distribution Unit</pdu>
+    <ups height="4">Power Supply</ups>
+  </rack>
+</racks>
