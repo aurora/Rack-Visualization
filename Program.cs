@@ -26,11 +26,11 @@ class Program
                 return;
             }
 
-            Console.WriteLine($"Lese RackML aus: {inputFile}");
-            string rackmlContent = File.ReadAllText(inputFile);
+            Console.WriteLine($"Lese Eingabedatei: {inputFile}");
+            string inputContent = File.ReadAllText(inputFile);
 
-            Console.WriteLine("Parse RackML...");
-            var rackSet = RackMLParser.ParseRackML(rackmlContent);
+            // Determine format based on file extension or content
+            var rackSet = ParseInput(inputFile, inputContent);
 
             Console.WriteLine($"Gefunden: {rackSet.Racks.Count} Rack(s)");
             foreach (var rack in rackSet.Racks)
@@ -58,19 +58,52 @@ class Program
         }
     }
 
+    static Models.RackSet ParseInput(string inputFile, string inputContent)
+    {
+        string extension = Path.GetExtension(inputFile).ToLowerInvariant();
+        
+        if (extension == ".xml")
+        {
+            Console.WriteLine("Parse RackML (XML-Format)...");
+            return RackMLParser.ParseRackML(inputContent);
+        }
+        else if (extension == ".txt" || extension == ".rack")
+        {
+            Console.WriteLine("Parse Text-Markup-Format...");
+            var parser = new TextMarkupParser(inputContent);
+            return parser.Parse();
+        }
+        else
+        {
+            // Try to auto-detect format based on content
+            if (inputContent.TrimStart().StartsWith("<"))
+            {
+                Console.WriteLine("Parse RackML (XML-Format, auto-detected)...");
+                return RackMLParser.ParseRackML(inputContent);
+            }
+            else
+            {
+                Console.WriteLine("Parse Text-Markup-Format (auto-detected)...");
+                var parser = new TextMarkupParser(inputContent);
+                return parser.Parse();
+            }
+        }
+    }
+
     static void ShowUsage()
     {
         Console.WriteLine("Verwendung:");
-        Console.WriteLine("  RackVisualization.exe <eingabe.xml> [ausgabe.svg]");
+        Console.WriteLine("  RackVisualization.exe <eingabedatei> [ausgabe.svg]");
         Console.WriteLine();
         Console.WriteLine("Parameter:");
-        Console.WriteLine("  eingabe.xml   - RackML XML-Eingabedatei");
+        Console.WriteLine("  eingabedatei  - Eingabedatei (.xml für RackML, .txt/.rack für Text-Markup)");
         Console.WriteLine("  ausgabe.svg   - SVG-Ausgabedatei (optional, Standard: output.svg)");
         Console.WriteLine();
-        Console.WriteLine("Beispiel:");
+        Console.WriteLine("Beispiele:");
         Console.WriteLine("  RackVisualization.exe rack.xml rack-diagram.svg");
+        Console.WriteLine("  RackVisualization.exe rack.txt rack-diagram.svg");
         Console.WriteLine();
-        Console.WriteLine("RackML Format:");
+        Console.WriteLine("RackML XML-Format:");
         Console.WriteLine("  <racks>");
         Console.WriteLine("    <rack height=\"42\" name=\"Server Rack\">");
         Console.WriteLine("      <server height=\"2\">Web Server</server>");
@@ -78,5 +111,13 @@ class Program
         Console.WriteLine("      <firewall href=\"firewall-01\">Firewall</firewall>");
         Console.WriteLine("    </rack>");
         Console.WriteLine("  </racks>");
+        Console.WriteLine();
+        Console.WriteLine("Text-Markup-Format:");
+        Console.WriteLine("  caption: Server Rack");
+        Console.WriteLine("  height: 42");
+        Console.WriteLine("  items:");
+        Console.WriteLine("    - server[2]: Web Server");
+        Console.WriteLine("    - switch: Network Switch");
+        Console.WriteLine("    - firewall: [Firewall](firewall-01)");
     }
 }
