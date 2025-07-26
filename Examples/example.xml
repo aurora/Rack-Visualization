@@ -17,7 +17,7 @@
     <kvm>KVM</kvm>
     <blank height="2"/>
     <server height="2" href="server-01">Server</server>
-    <san height="2" href="san-01">Storage Area Network</san>
+    <storage height="2" href="storage-01">Storage</storage>
     <server href="server-02" height="4">Server</server>
     <gap height="2"/>
     <pdu>Power Distribution Unit</pdu>

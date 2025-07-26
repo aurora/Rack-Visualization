@@ -124,7 +124,7 @@ label         = text ;  (* can contain Markdown *)
 - `patch` - Patch Panel
 - `pdu` - Power Distribution Unit
 - `ups` - Uninterruptible Power Supply
-- `san` - Storage Area Network
+- `storage` - Storage
 - `tape` - Tape Drive
 - `monitor` - Monitor
 - `keyboard` - Keyboard

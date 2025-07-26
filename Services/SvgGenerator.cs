@@ -174,10 +174,10 @@ public class SvgGenerator
                 deviceSvg.AppendLine($@"<path d=""{pduPath}"" stroke=""#555"" fill=""none"" stroke-width=""2"" stroke-linecap=""round""/>");
                 break;
 
-            case "san":
-                // SAN symbol with filled rectangles
-                var sanPath = DeviceSymbols.GetSymbolPath("san");
-                deviceSvg.AppendLine($@"<path d=""{sanPath}"" stroke=""none"" fill=""#555"" fill-rule=""evenodd""/>");
+            case "storage":
+                // Storage symbol with filled rectangles
+                var storagePath = DeviceSymbols.GetSymbolPath("storage");
+                deviceSvg.AppendLine($@"<path d=""{storagePath}"" stroke=""none"" fill=""#555"" fill-rule=""evenodd""/>");
                 break;
 
             case "server":

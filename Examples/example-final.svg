@@ -1,0 +1,264 @@
+<svg baseProfile="full" height="1100" version="1.1" width="566" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+            a text {
+                fill: #0066cc;
+                text-decoration: underline;
+            }
+            a:hover text {
+                fill: #004499;
+                filter: brightness(90%);
+            }
+        </style>
+<pattern id="pattern-empty" patternUnits="userSpaceOnUse" width="25" height="25">
+            <path d="M 0 12.5 L 25 12.5" fill="none" stroke="#ccc" stroke-width="1"/>
+        </pattern>
+<g transform="translate(-25, 0)">
+<text x="44" y="39.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">42</text>
+<line x1="30" y1="25" x2="46" y2="25" stroke="black" stroke-width="2"/>
+<text x="44" y="64.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">41</text>
+<line x1="30" y1="50" x2="46" y2="50" stroke="black" stroke-width="2"/>
+<text x="44" y="89.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">40</text>
+<line x1="30" y1="75" x2="46" y2="75" stroke="black" stroke-width="2"/>
+<text x="44" y="114.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">39</text>
+<line x1="30" y1="100" x2="46" y2="100" stroke="black" stroke-width="2"/>
+<text x="44" y="139.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">38</text>
+<line x1="30" y1="125" x2="46" y2="125" stroke="black" stroke-width="2"/>
+<text x="44" y="164.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">37</text>
+<line x1="30" y1="150" x2="46" y2="150" stroke="black" stroke-width="2"/>
+<text x="44" y="189.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">36</text>
+<line x1="30" y1="175" x2="46" y2="175" stroke="black" stroke-width="2"/>
+<text x="44" y="214.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">35</text>
+<line x1="30" y1="200" x2="46" y2="200" stroke="black" stroke-width="2"/>
+<text x="44" y="239.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">34</text>
+<line x1="30" y1="225" x2="46" y2="225" stroke="black" stroke-width="2"/>
+<text x="44" y="264.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">33</text>
+<line x1="30" y1="250" x2="46" y2="250" stroke="black" stroke-width="2"/>
+<text x="44" y="289.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">32</text>
+<line x1="30" y1="275" x2="46" y2="275" stroke="black" stroke-width="2"/>
+<text x="44" y="314.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">31</text>
+<line x1="30" y1="300" x2="46" y2="300" stroke="black" stroke-width="2"/>
+<text x="44" y="339.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">30</text>
+<line x1="30" y1="325" x2="46" y2="325" stroke="black" stroke-width="2"/>
+<text x="44" y="364.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">29</text>
+<line x1="30" y1="350" x2="46" y2="350" stroke="black" stroke-width="2"/>
+<text x="44" y="389.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">28</text>
+<line x1="30" y1="375" x2="46" y2="375" stroke="black" stroke-width="2"/>
+<text x="44" y="414.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">27</text>
+<line x1="30" y1="400" x2="46" y2="400" stroke="black" stroke-width="2"/>
+<text x="44" y="439.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">26</text>
+<line x1="30" y1="425" x2="46" y2="425" stroke="black" stroke-width="2"/>
+<text x="44" y="464.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">25</text>
+<line x1="30" y1="450" x2="46" y2="450" stroke="black" stroke-width="2"/>
+<text x="44" y="489.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">24</text>
+<line x1="30" y1="475" x2="46" y2="475" stroke="black" stroke-width="2"/>
+<text x="44" y="514.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">23</text>
+<line x1="30" y1="500" x2="46" y2="500" stroke="black" stroke-width="2"/>
+<text x="44" y="539.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">22</text>
+<line x1="30" y1="525" x2="46" y2="525" stroke="black" stroke-width="2"/>
+<text x="44" y="564.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">21</text>
+<line x1="30" y1="550" x2="46" y2="550" stroke="black" stroke-width="2"/>
+<text x="44" y="589.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">20</text>
+<line x1="30" y1="575" x2="46" y2="575" stroke="black" stroke-width="2"/>
+<text x="44" y="614.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">19</text>
+<line x1="30" y1="600" x2="46" y2="600" stroke="black" stroke-width="2"/>
+<text x="44" y="639.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">18</text>
+<line x1="30" y1="625" x2="46" y2="625" stroke="black" stroke-width="2"/>
+<text x="44" y="664.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">17</text>
+<line x1="30" y1="650" x2="46" y2="650" stroke="black" stroke-width="2"/>
+<text x="44" y="689.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">16</text>
+<line x1="30" y1="675" x2="46" y2="675" stroke="black" stroke-width="2"/>
+<text x="44" y="714.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">15</text>
+<line x1="30" y1="700" x2="46" y2="700" stroke="black" stroke-width="2"/>
+<text x="44" y="739.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">14</text>
+<line x1="30" y1="725" x2="46" y2="725" stroke="black" stroke-width="2"/>
+<text x="44" y="764.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">13</text>
+<line x1="30" y1="750" x2="46" y2="750" stroke="black" stroke-width="2"/>
+<text x="44" y="789.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">12</text>
+<line x1="30" y1="775" x2="46" y2="775" stroke="black" stroke-width="2"/>
+<text x="44" y="814.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">11</text>
+<line x1="30" y1="800" x2="46" y2="800" stroke="black" stroke-width="2"/>
+<text x="44" y="839.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">10</text>
+<line x1="30" y1="825" x2="46" y2="825" stroke="black" stroke-width="2"/>
+<text x="44" y="864.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">9</text>
+<line x1="30" y1="850" x2="46" y2="850" stroke="black" stroke-width="2"/>
+<text x="44" y="889.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">8</text>
+<line x1="30" y1="875" x2="46" y2="875" stroke="black" stroke-width="2"/>
+<text x="44" y="914.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">7</text>
+<line x1="30" y1="900" x2="46" y2="900" stroke="black" stroke-width="2"/>
+<text x="44" y="939.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">6</text>
+<line x1="30" y1="925" x2="46" y2="925" stroke="black" stroke-width="2"/>
+<text x="44" y="964.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">5</text>
+<line x1="30" y1="950" x2="46" y2="950" stroke="black" stroke-width="2"/>
+<text x="44" y="989.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">4</text>
+<line x1="30" y1="975" x2="46" y2="975" stroke="black" stroke-width="2"/>
+<text x="44" y="1014.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">3</text>
+<line x1="30" y1="1000" x2="46" y2="1000" stroke="black" stroke-width="2"/>
+<text x="44" y="1039.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">2</text>
+<line x1="30" y1="1025" x2="46" y2="1025" stroke="black" stroke-width="2"/>
+<text x="44" y="1064.5" text-anchor="end" dominant-baseline="middle" font-family="sans-serif" font-size="12">1</text>
+<line x1="30" y1="1050" x2="46" y2="1050" stroke="black" stroke-width="2"/>
+<line x1="30" y1="1075" x2="46" y2="1075" stroke="black" stroke-width="2"/>
+
+</g>
+<g transform="translate(25, 0)">
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">Example</text>
+<rect x="0" y="25" width="300" height="1050" fill="url(#pattern-empty)" stroke="black"/>
+<g transform="translate(0, 975)">
+<rect x="0" y="0" width="300" height="100" fill="#b5ead7" stroke="black"/>
+<text x="150" y="52" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">ups</text>
+<text x="316" y="52" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Power Supply</text>
+<path d="M 15 7 h 6 l -3 5 h 3 l -8 10 l 2 -7 h -3" fill="#555" stroke="none"/>
+
+</g>
+<g transform="translate(0, 950)">
+<rect x="0" y="0" width="300" height="25" fill="#b5ead7" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">pdu</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Power Distribution Unit</text>
+<path d="M 17 5 v 7 m 3 -5 a 6 6 240 1 1 -6 0" stroke="#555" fill="none" stroke-width="2" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(0, 850)">
+<a href="server-02"><rect x="0" y="0" width="300" height="100" fill="#c7ceea" stroke="black"/>
+<text x="150" y="52" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">server</text>
+<a xlink:href="server-02"><text x="316" y="52" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Server</text></a>
+<path d="M 7 5 h 20 v 7 h -20 v -7 m 0 8 h 20 v 7 h -20 v -7 M 25 8 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0 M 25 16 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0" stroke="none" fill="#555" fill-rule="evenodd"/>
+</a>
+</g>
+<g transform="translate(0, 800)">
+<a href="storage-01"><rect x="0" y="0" width="300" height="50" fill="#c7ceea" stroke="black"/>
+<text x="150" y="27" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">storage</text>
+<a xlink:href="storage-01"><text x="316" y="27" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Storage</text></a>
+<path d="M 7 7 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5" stroke="none" fill="#555" fill-rule="evenodd"/>
+</a>
+</g>
+<g transform="translate(0, 750)">
+<a href="server-01"><rect x="0" y="0" width="300" height="50" fill="#c7ceea" stroke="black"/>
+<text x="150" y="27" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">server</text>
+<a xlink:href="server-01"><text x="316" y="27" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Server</text></a>
+<path d="M 7 5 h 20 v 7 h -20 v -7 m 0 8 h 20 v 7 h -20 v -7 M 25 8 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0 M 25 16 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0" stroke="none" fill="#555" fill-rule="evenodd"/>
+</a>
+</g>
+<g transform="translate(0, 700)">
+<rect x="0" y="0" width="300" height="50" fill="#f4f4f4" stroke="black"/>
+<text x="150" y="27" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">blank</text>
+
+</g>
+<g transform="translate(0, 675)">
+<rect x="0" y="0" width="300" height="25" fill="#f4f4f4" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">kvm</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">KVM</text>
+
+</g>
+<g transform="translate(0, 650)">
+<rect x="0" y="0" width="300" height="25" fill="#f4f4f4" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">keyboard</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Keyboard</text>
+
+</g>
+<g transform="translate(0, 450)">
+<rect x="0" y="0" width="300" height="200" fill="#f4f4f4" stroke="black"/>
+<text x="150" y="102" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">monitor</text>
+<text x="316" y="102" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Monitor</text>
+
+</g>
+<g transform="translate(0, 300)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 275)">
+<a href="firewall-02"><rect x="0" y="0" width="300" height="25" fill="#ff9aa2" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">firewall</text>
+<a xlink:href="firewall-02"><text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Firewall</text></a>
+<path d="M 8 6.5 h 20 v 12 h -20 z m 0 4 h 20 m 0 4 h -20 M 7 7 m 7 0 v 4 m 8 0 v -4 m -4 4 v 4 m -4 0 v 4 m 8 0 v -4" fill="none" stroke="#555" stroke-width="2"/>
+</a>
+</g>
+<g transform="translate(0, 250)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 225)">
+<a href="firewall-01"><rect x="0" y="0" width="300" height="25" fill="#ff9aa2" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">firewall</text>
+<a xlink:href="firewall-01"><text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Firewall</text></a>
+<path d="M 8 6.5 h 20 v 12 h -20 z m 0 4 h 20 m 0 4 h -20 M 7 7 m 7 0 v 4 m 8 0 v -4 m -4 4 v 4 m -4 0 v 4 m 8 0 v -4" fill="none" stroke="#555" stroke-width="2"/>
+</a>
+</g>
+<g transform="translate(0, 200)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 175)">
+<rect x="0" y="0" width="300" height="25" fill="#b1dd9e" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">switch</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Switch</text>
+<path d="M 19 5 h 6 v -2.5 l 4 4 l -4 4 v -2.5 h -6 m -2 1 h -6 v -2.5 l -4 4 l 4 4 v -2.5 h 6 m 2 2 h 6 v -2.5 l 4 4 l -4 4 v -2.5 h -6 m -2 1 h -6 v -2.5 l -4 4 l 4 4 v -2.5 h 6" fill="#555" stroke="none"/>
+
+</g>
+<g transform="translate(0, 150)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 125)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">patch</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Patch</text>
+<rect x="7" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="14" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="21" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="28" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="7" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="14" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="21" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="28" y="14" width="4" height="4" fill="#555" stroke="none"/>
+
+</g>
+<g transform="translate(0, 100)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 75)">
+<rect x="0" y="0" width="300" height="25" fill="#b1dd9e" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">switch</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Switch</text>
+<path d="M 19 5 h 6 v -2.5 l 4 4 l -4 4 v -2.5 h -6 m -2 1 h -6 v -2.5 l -4 4 l 4 4 v -2.5 h 6 m 2 2 h 6 v -2.5 l 4 4 l -4 4 v -2.5 h -6 m -2 1 h -6 v -2.5 l -4 4 l 4 4 v -2.5 h 6" fill="#555" stroke="none"/>
+
+</g>
+<g transform="translate(0, 50)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">cables</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Cables</text>
+<path d="M 12 7 l -5 5 l 5 5 m 3 -5 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 5 0 a 1,1 0 1,1 -2,0 a 1,1 0 1,1 2,0 m 1 -5 l 5 5 l -5 5" fill="none" stroke="#555" stroke-width="2"/>
+
+</g>
+<g transform="translate(0, 25)">
+<rect x="0" y="0" width="300" height="25" fill="#ffdac1" stroke="black"/>
+<text x="150" y="14.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="13">patch</text>
+<text x="316" y="14.5" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="13">Patch</text>
+<rect x="7" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="14" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="21" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="28" y="7" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="7" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="14" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="21" y="14" width="4" height="4" fill="#555" stroke="none"/>
+<rect x="28" y="14" width="4" height="4" fill="#555" stroke="none"/>
+
+</g>
+
+</g>
+</svg>

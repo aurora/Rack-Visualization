@@ -14,7 +14,7 @@ public static class DeviceSymbols
             
             "pdu" => @"M 17 5 v 7 m 3 -5 a 6 6 240 1 1 -6 0",
             
-            "san" => @"M 7 7 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5",
+            "storage" => @"M 7 7 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5 m 7 0 v 15 h 5 v -15 h -5",
             
             "server" => @"M 7 5 h 20 v 7 h -20 v -7 m 0 8 h 20 v 7 h -20 v -7 M 25 8 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0 M 25 16 a 2,2 0 1,1 -4,0 a 2,2 0 1,1 4,0",
             
