@@ -37,10 +37,10 @@ dotnet run --project RackVisualization.csproj <input-file> [output.svg]
 
 ```bash
 # XML format
-dotnet run --project RackVisualization.csproj example.xml rack-diagram.svg
+dotnet run --project RackVisualization.csproj Examples/example.xml rack-diagram.svg
 
 # Text markup format
-dotnet run --project RackVisualization.csproj example.txt rack-diagram.svg
+dotnet run --project RackVisualization.csproj Examples/example.txt rack-diagram.svg
 ```
 
 ## Input Formats
@@ -152,8 +152,9 @@ RackVisualization/
 │   └── SvgGenerator.cs        # SVG generation
 ├── Program.cs                 # Main program
 ├── RackVisualization.csproj   # Project file
-├── example.xml               # Example RackML file
-└── example.txt               # Example text markup file
+└── Examples/
+    ├── example.xml           # Example RackML file
+    └── example.txt           # Example text markup file
 ```
 
 ## Example Output
