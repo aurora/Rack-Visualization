@@ -23,7 +23,7 @@ public class SvgGenerator
         var rackCount = rackSet.Racks.Count;
         var svgHeight = (2 * DefaultSvgMargin) + (DefaultRackUnitPoints * maxRackHeight);
 
-        // Berechne maximale Label-Länge (in Zeichen)
+        // Calculate maximum label length (in characters)
         int maxLabelLen = 0;
         foreach (var rack in rackSet.Racks)
         {
@@ -33,7 +33,7 @@ public class SvgGenerator
                     maxLabelLen = device.Text.Length;
             }
         }
-        // Schätze Breite: 8px pro Zeichen + 32px Puffer
+        // Estimate width: 8px per character + 32px buffer
         int labelWidth = (maxLabelLen * 8) + 32;
 
         var svgWidth = (2 * DefaultSvgMargin) + (rackCount * DefaultRackWidthPoints) +
@@ -60,12 +60,12 @@ public class SvgGenerator
         var xOffset = DefaultSvgMargin;
         foreach (var rack in rackSet.Racks)
         {
-            // Skala links vom Rack (mit mehr Abstand)
+            // Scale to the left of the rack (with more distance)
             svg.AppendLine($@"<g transform=""translate({xOffset - 50}, 0)"">");
             svg.AppendLine(GenerateRackScale(rack.Height));
             svg.AppendLine("</g>");
 
-            // Rack selbst
+            // Rack itself
             svg.AppendLine($@"<g transform=""translate({xOffset}, 0)"">");
             svg.AppendLine(GenerateRack(rack, rackSet.BaseHref));
             svg.AppendLine("</g>");
@@ -131,20 +131,20 @@ public class SvgGenerator
         // Device background rectangle
         deviceSvg.AppendLine($@"<rect x=""0"" y=""0"" width=""{DefaultRackWidthPoints}"" height=""{deviceHeight}"" fill=""{color}"" stroke=""black""/>");
 
-        // Im Shape steht jetzt der Typ des Geräts (zentriert)
+        // The device type is now displayed in the shape (centered)
         {
             var textY = (deviceHeight / 2.0) + 2;
             deviceSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{textY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Type)}</text>");
         }
 
-        // Label außerhalb des Racks rechts, vertikal zentriert zur Einheit
+        // Label outside the rack on the right, vertically centered to the unit
         if (!string.IsNullOrEmpty(device.Text))
         {
-            var labelX = DefaultRackWidthPoints + 16; // 16px Abstand rechts vom Rack
+            var labelX = DefaultRackWidthPoints + 16; // 16px distance to the right of the rack
             var labelY = (deviceHeight / 2.0) + 2;
             var labelText = $@"<text x=""{labelX.ToString(CultureInfo.InvariantCulture)}"" y=""{labelY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""start"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Text)}</text>";
 
-            // Wenn href vorhanden, Label als Link
+            // If href is present, make label a link
             if (!string.IsNullOrEmpty(device.Href))
             {
                 var href = !string.IsNullOrEmpty(baseHref) && Uri.IsWellFormedUriString(baseHref, UriKind.Absolute)
@@ -152,7 +152,7 @@ public class SvgGenerator
                     : device.Href;
                 labelText = $@"<a xlink:href=""{XmlEscape(href)}"">{labelText}</a>";
             }
-            // Label außerhalb des Racks hinzufügen
+            // Add label outside the rack
             deviceSvg.AppendLine(labelText);
         }
 
@@ -234,26 +234,26 @@ public class SvgGenerator
         return deviceContent;
     }
 
-    // Skala für Höheneinheiten (U) links neben dem Rack
+    // Scale for height units (U) to the left of the rack
     private string GenerateRackScale(int rackHeight)
     {
         var sb = new StringBuilder();
-        int scaleX = 44; // Abstand von links (Skala steht bei x=0 bis x=32)
-        int textX = scaleX; // Text rechtsbündig, etwas Abstand zum Strich
-        int lineX1 = scaleX - 14; // Strich beginnt links
-        int lineX2 = scaleX + 2;      // Strich endet rechts (am Rack)
+        int scaleX = 44; // Distance from left (scale is positioned from x=0 to x=32)
+        int textX = scaleX; // Text right-aligned, some distance from the line
+        int lineX1 = scaleX - 14; // Line starts on the left
+        int lineX2 = scaleX + 2;      // Line ends on the right (at the rack)
 
         for (int u = rackHeight; u >= 1; u--)
         {
-            // Y-Position: Oberkante der jeweiligen Höheneinheit
+            // Y-Position: Top edge of the respective height unit
             double y = DefaultSvgMargin + (rackHeight - u) * DefaultRackUnitPoints;
 
-            // Text (rechtsbündig, vertikal zentriert in der Unit)
+            // Text (right-aligned, vertically centered in the unit)
             sb.AppendLine($@"<text x=""{textX}"" y=""{(y + DefaultRackUnitPoints / 2.0 + 2).ToString(CultureInfo.InvariantCulture)}"" text-anchor=""end"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""12"">{u}</text>");
-            // Skalenstrich
+            // Scale line
             sb.AppendLine($@"<line x1=""{lineX1}"" y1=""{y.ToString(CultureInfo.InvariantCulture)}"" x2=""{lineX2}"" y2=""{y.ToString(CultureInfo.InvariantCulture)}"" stroke=""black"" stroke-width=""2""/>");
         }
-        // Unterkante (letzter Strich)
+        // Bottom edge (last line)
         double yBottom = DefaultSvgMargin + rackHeight * DefaultRackUnitPoints;
         sb.AppendLine($@"<line x1=""{lineX1}"" y1=""{yBottom.ToString(CultureInfo.InvariantCulture)}"" x2=""{lineX2}"" y2=""{yBottom.ToString(CultureInfo.InvariantCulture)}"" stroke=""black"" stroke-width=""2""/>");
 
