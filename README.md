@@ -14,6 +14,12 @@ A C# console application for generating rack elevation diagrams from RackML XML 
 - Clickable links in SVG output (with visual highlighting)
 - Markdown syntax for links in text format
 
+## Example Output
+
+![Rack Visualization Example](Examples/example.png)
+
+*Example rack diagram generated from the included example.xml file*
+
 ## Installation
 
 1. Install .NET 8.0 SDK
