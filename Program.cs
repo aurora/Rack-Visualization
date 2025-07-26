@@ -22,35 +22,35 @@ class Program
 
             if (!File.Exists(inputFile))
             {
-                Console.WriteLine($"Fehler: Eingabedatei '{inputFile}' wurde nicht gefunden.");
+                Console.WriteLine($"Error: Input file '{inputFile}' not found.");
                 return;
             }
 
-            Console.WriteLine($"Lese Eingabedatei: {inputFile}");
+            Console.WriteLine($"Reading input file: {inputFile}");
             string inputContent = File.ReadAllText(inputFile);
 
             // Determine format based on file extension or content
             var rackSet = ParseInput(inputFile, inputContent);
 
-            Console.WriteLine($"Gefunden: {rackSet.Racks.Count} Rack(s)");
+            Console.WriteLine($"Found: {rackSet.Racks.Count} Rack(s)");
             foreach (var rack in rackSet.Racks)
             {
-                Console.WriteLine($"  - {rack.Name} ({rack.Height}U, {rack.Devices.Count} Geräte)");
+                Console.WriteLine($"  - {rack.Name} ({rack.Height}U, {rack.Devices.Count} devices)");
             }
 
-            Console.WriteLine("Generiere SVG...");
+            Console.WriteLine("Generating SVG...");
             var svgGenerator = new SvgGenerator();
             string svgContent = svgGenerator.GenerateSvg(rackSet);
 
-            Console.WriteLine($"Schreibe SVG nach: {outputFile}");
+            Console.WriteLine($"Writing SVG to: {outputFile}");
             File.WriteAllText(outputFile, svgContent);
 
-            Console.WriteLine("✓ Erfolgreich abgeschlossen!");
-            Console.WriteLine($"SVG-Datei erstellt: {outputFile}");
+            Console.WriteLine("✓ Successfully completed!");
+            Console.WriteLine($"SVG file created: {outputFile}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Fehler: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}");
             if (ex.InnerException != null)
             {
                 Console.WriteLine($"Details: {ex.InnerException.Message}");
@@ -64,12 +64,12 @@ class Program
         
         if (extension == ".xml")
         {
-            Console.WriteLine("Parse RackML (XML-Format)...");
+            Console.WriteLine("Parsing RackML (XML format)...");
             return RackMLParser.ParseRackML(inputContent);
         }
         else if (extension == ".txt" || extension == ".rack")
         {
-            Console.WriteLine("Parse Text-Markup-Format...");
+            Console.WriteLine("Parsing text markup format...");
             var parser = new TextMarkupParser(inputContent);
             return parser.Parse();
         }
@@ -78,12 +78,12 @@ class Program
             // Try to auto-detect format based on content
             if (inputContent.TrimStart().StartsWith("<"))
             {
-                Console.WriteLine("Parse RackML (XML-Format, auto-detected)...");
+                Console.WriteLine("Parsing RackML (XML format, auto-detected)...");
                 return RackMLParser.ParseRackML(inputContent);
             }
             else
             {
-                Console.WriteLine("Parse Text-Markup-Format (auto-detected)...");
+                Console.WriteLine("Parsing text markup format (auto-detected)...");
                 var parser = new TextMarkupParser(inputContent);
                 return parser.Parse();
             }
@@ -92,18 +92,18 @@ class Program
 
     static void ShowUsage()
     {
-        Console.WriteLine("Verwendung:");
-        Console.WriteLine("  RackVisualization.exe <eingabedatei> [ausgabe.svg]");
+        Console.WriteLine("Usage:");
+        Console.WriteLine("  RackVisualization.exe <input-file> [output.svg]");
         Console.WriteLine();
-        Console.WriteLine("Parameter:");
-        Console.WriteLine("  eingabedatei  - Eingabedatei (.xml für RackML, .txt/.rack für Text-Markup)");
-        Console.WriteLine("  ausgabe.svg   - SVG-Ausgabedatei (optional, Standard: output.svg)");
+        Console.WriteLine("Parameters:");
+        Console.WriteLine("  input-file    - Input file (.xml for RackML, .txt/.rack for text markup)");
+        Console.WriteLine("  output.svg    - SVG output file (optional, default: output.svg)");
         Console.WriteLine();
-        Console.WriteLine("Beispiele:");
+        Console.WriteLine("Examples:");
         Console.WriteLine("  RackVisualization.exe rack.xml rack-diagram.svg");
         Console.WriteLine("  RackVisualization.exe rack.txt rack-diagram.svg");
         Console.WriteLine();
-        Console.WriteLine("RackML XML-Format:");
+        Console.WriteLine("RackML XML Format:");
         Console.WriteLine("  <racks>");
         Console.WriteLine("    <rack height=\"42\" name=\"Server Rack\">");
         Console.WriteLine("      <server height=\"2\">Web Server</server>");
@@ -112,7 +112,7 @@ class Program
         Console.WriteLine("    </rack>");
         Console.WriteLine("  </racks>");
         Console.WriteLine();
-        Console.WriteLine("Text-Markup-Format:");
+        Console.WriteLine("Text Markup Format:");
         Console.WriteLine("  caption: Server Rack");
         Console.WriteLine("  height: 42");
         Console.WriteLine("  items:");
