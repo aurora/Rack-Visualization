@@ -91,8 +91,8 @@ public class SvgGenerator
         // Add rack name if present
         if (!string.IsNullOrEmpty(rack.Name))
         {
-            var nameY = (DefaultSvgMargin / 2.0) + 4;
-            rackSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{nameY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""central"" font-family=""sans-serif"">{XmlEscape(rack.Name)}</text>");
+            var nameY = (DefaultSvgMargin / 2.0) + 2;
+            rackSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{nameY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""middle"" font-family=""sans-serif"">{XmlEscape(rack.Name)}</text>");
         }
 
         // Add rack background
@@ -133,16 +133,16 @@ public class SvgGenerator
 
         // Im Shape steht jetzt der Typ des Geräts (zentriert)
         {
-            var textY = (deviceHeight / 2.0) + 4;
-            deviceSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{textY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""central"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Type)}</text>");
+            var textY = (deviceHeight / 2.0) + 2;
+            deviceSvg.AppendLine($@"<text x=""{DefaultRackWidthPoints / 2}"" y=""{textY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""middle"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Type)}</text>");
         }
 
         // Label außerhalb des Racks rechts, vertikal zentriert zur Einheit
         if (!string.IsNullOrEmpty(device.Text))
         {
             var labelX = DefaultRackWidthPoints + 16; // 16px Abstand rechts vom Rack
-            var labelY = (deviceHeight / 2.0) + 4;
-            var labelText = $@"<text x=""{labelX.ToString(CultureInfo.InvariantCulture)}"" y=""{labelY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""start"" dominant-baseline=""central"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Text)}</text>";
+            var labelY = (deviceHeight / 2.0) + 2;
+            var labelText = $@"<text x=""{labelX.ToString(CultureInfo.InvariantCulture)}"" y=""{labelY.ToString(CultureInfo.InvariantCulture)}"" text-anchor=""start"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""13"">{XmlEscape(device.Text)}</text>";
 
             // Wenn href vorhanden, Label als Link
             if (!string.IsNullOrEmpty(device.Href))
@@ -249,7 +249,7 @@ public class SvgGenerator
             double y = DefaultSvgMargin + (rackHeight - u) * DefaultRackUnitPoints;
 
             // Text (rechtsbündig, vertikal zentriert in der Unit)
-            sb.AppendLine($@"<text x=""{textX}"" y=""{(y + DefaultRackUnitPoints / 2.0 + 1).ToString(CultureInfo.InvariantCulture)}"" text-anchor=""end"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""12"">{u}</text>");
+            sb.AppendLine($@"<text x=""{textX}"" y=""{(y + DefaultRackUnitPoints / 2.0 + 2).ToString(CultureInfo.InvariantCulture)}"" text-anchor=""end"" dominant-baseline=""middle"" font-family=""sans-serif"" font-size=""12"">{u}</text>");
             // Skalenstrich
             sb.AppendLine($@"<line x1=""{lineX1}"" y1=""{y.ToString(CultureInfo.InvariantCulture)}"" x2=""{lineX2}"" y2=""{y.ToString(CultureInfo.InvariantCulture)}"" stroke=""black"" stroke-width=""2""/>");
         }
