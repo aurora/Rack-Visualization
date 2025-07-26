@@ -1,0 +1,25 @@
+caption: Example Rack
+height: 42
+items:
+  - patch: Patch
+  - cables: Cables
+  - switch: Switch
+  - cables: Cables
+  - patch: Patch
+  - cables: Cables
+  - switch: Switch
+  - cables: Cables
+  - firewall: [Firewall](firewall-01)
+  - cables: Cables
+  - firewall: [Firewall](firewall-02)
+  - cables: Cables
+  - monitor[8]: Monitor
+  - keyboard: Keyboard
+  - kvm: KVM
+  - blank[2]: 
+  - server[2]: [Server](server-01)
+  - san[2]: [Storage Area Network](san-01)
+  - server[4]: [Server](server-02)
+  - gap[2]: 
+  - pdu: Power Distribution Unit
+  - ups[4]: Power Supply
