@@ -44,7 +44,12 @@ public class SvgGenerator
         
         // Add CSS styles
         svg.AppendLine(@"<style>
-            a:hover {
+            a text {
+                fill: #0066cc;
+                text-decoration: underline;
+            }
+            a:hover text {
+                fill: #004499;
                 filter: brightness(90%);
             }
         </style>");
